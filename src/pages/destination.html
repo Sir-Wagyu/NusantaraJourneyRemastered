@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nusantara Journey</title>
+    <link rel="icon" type="image/x-icon" href="..//assets/img/logo/logo.png">
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body class="bg-[#FAF5EF] font-poppins">
+    <!-- navigation -->
+    <div x-data="{open : false}" class="sticky top-0 left-0 w-full z-50">
+        <nav
+            class="sticky top-0 left-0 w-full z-50  px-8 md:px-16 py-1  text-[#7b947e] backdrop-blur-sm bg-gray-400/25 drop-shadow-md">
+            <div class="flex justify-between md:justify-center lg:justify-between items-center">
+                <div class="h-12 hidden xl:block">
+                    <img src="/src/assets/img/logo/horizontal.png" alt="" class=" w-full h-full object-cover ">
+                </div>
+                <div class="h-10 xl:hidden">
+                    <img src="/src/assets/img/logo/logo.png" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="md:hidden">
+                    <button @click="open = !open" class="active:scale-95 transition-all">
+                        <i class="fa-solid fa-bars text-2xl hover:scale-105"></i>
+                    </button>
+                </div>
+                <div class="hidden gap-2 font-bold md:flex">
+                    <a href="/src/pages/index.html"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Home</a>
+                    <a href="/src/pages/index.html#destination"
+                        class="hover:border-b-4 hover:border-[#7b947e] px-7 py-2 m-2 transition-all">Destinasi</a>
+                    <a href="/src/pages/index.html#culture"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Budaya</a>
+                    <a href="/src/pages/index.html#culinary"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Kuliner</a>
+                    <a href="/src/pages/index.html#contact"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <div x-show="open" x-transition
+            class="w-full flex flex-col items-center absolute top-12 z-50 text-[#7b947e] backdrop-blur-sm bg-gray-400/25 drop-shadow-md">
+            <a href="/src/pages/index.html"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Home</a>
+            <a href="/src/pages/index.html#destination"
+                class="hover:border-b-4 hover:border-[#7b947e] px-7 py-2 m-2 transition-all">Destinasi</a>
+            <a href="/src/pages/index.html#culture"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Budaya</a>
+            <a href="/src/pages/index.html#culinary"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Kuliner</a>
+            <a href="/src/pages/index.html#contact"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Contact</a>
+        </div>
+    </div>
+
+
+    <section class="text-[#7b947e]">
+        <a href="/index.html#btn-destination"
+            class="mt-5 lg:mt-7 mx-5 lg:mx-7 flex items-center gap-2 text-base lg:text-lg hover:text-[#672F2F] transition">
+            <i class="fa-solid fa-angle-left"></i>
+            <p class="font-medium">Kembali</p>
+        </a>
+
+        <div class="text-center flex justify-center flex-col items-center mt-10 mx-5 md:mx-14 lg:mx-44"
+            data-aos="fade-down">
+            <h1 class="font-bold text-2xl md:text-3xl xl:text-4xl capitalize font-lora tracking-wider">Destinasi Wisata
+            </h1>
+            <p class="font-normal text-base md:text-lg lg:text-xl text-center capitalize mt-6 md:mt-8">
+                Indonesia memiliki berbagai tempat wisata menarik, mulai dari keindahan alam yang memukau, pantai
+                eksotis yang mempesona, hingga situs sejarah yang kaya akan cerita. Jelajahi keajaiban alam, laut,
+                pantai, dan warisan budaya yang menunggu Anda.
+            </p>
+        </div>
+
+        <!-- carousel -->
+        <div id="indicators-carousel" class="relative w-full h-full mt-16" data-carousel="slide" data-aos="fade-down">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden md:h-96 lg:h-[28rem]">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="../assets/img/destination/destinationPages/tegalalang3.jpg"
+                        class="w-full h-full object-cover" alt="..." loading="lazy">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="../assets/img/destination/destinationPages/candiPrambanan1.jpg"
+                        class="w-full h-full object-cover" alt="..." loading="lazy">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="../assets/img/destination/destinationPages/pantaiPink1.jpg "
+                        class="w-full h-full object-cover" alt="..." loading="lazy">
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="../assets/img/destination/destinationPages/jomblang1.jpg"
+                        class="w-full h-full object-cover" alt="..." loading="lazy">
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="../assets/img/destination/destinationPages/nusaPenida3.jpg"
+                        class="w-full h-full object-cover" alt="..." loading="lazy">
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                    data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                    data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                    data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                    data-carousel-slide-to="3"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                    data-carousel-slide-to="4"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button"
+                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev>
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 1 1 5l4 4" />
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button"
+                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-next>
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+
+        <p class="font-bold text-2xl md:text-3xl xl:text-4xl px-6 lg:mx-32 w-2/3 lg:w-1/3 mt-14 lg:mt-20"
+            data-aos="fade-right">Temukan
+            Destinasi
+            Wisata Populer</p>
+
+
+        <div class="px-6 lg:mx-32 mt-6 lg:mt-14" data-aos="fade-down">
+            <h1 class="font-semibold text-xl md:text-2xl xl:text-3xl">Destinasi Wisata Alam</h1>
+
+            <div class="mt-3 lg:mt-5 w-full overflow-x-auto snap-x" style="scrollbar-color: #672F2F #FAF5EF;">
+                <div class="flex w-max gap-3 mb-5">
+                    <!-- item 1 -->
+                    <a href="/src/pages/detailDestinationPages/alam/toba.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 overflow-hidden rounded-lg">
+                            <img src="../assets/img/destination/destinationPages/Toba.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 transition group-hover:scale-110 overflow-visible"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Danau Toba</h3>
+                            <p class="font-normal text-sm">Sumatera Utara, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 2 -->
+                    <a href="/src/pages/detailDestinationPages/alam/bromo.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/Bromo.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Gunung Bromo</h3>
+                            <p class="font-normal text-sm">Jawa Timur, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 3 -->
+                    <a href="/src/pages/detailDestinationPages/alam/jomblang.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/jomblang.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Goa Jomblang</h3>
+                            <p class="font-normal text-sm">Yogyakarta, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 4 -->
+                    <a href="/src/pages/detailDestinationPages/alam/kawahIjen.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/kawahIjen.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Kawah Ijen</h3>
+                            <p class="font-normal text-sm">Jawa Timur, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 5 -->
+                    <a href="/src/pages/detailDestinationPages/alam/pulauKomodo.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/pulauKomodo.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Taman Nasional Komodo</h3>
+                            <p class="font-normal text-sm">NTB, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 6 -->
+                    <a href="/src/pages/detailDestinationPages/alam/tegalalang.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/tegalalang.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Tegalalang Terasering</h3>
+                            <p class="font-normal text-sm">Bali, Indonesia</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="px-6 lg:mx-32 mt-28 lg:mt-32" data-aos="fade-down">
+            <h1 class="font-bold text-xl md:text-2xl xl:text-3xl">Destinasi Wisata Pantai & Laut</h1>
+
+            <div class="mt-3 lg:mt-5 w-full overflow-x-auto snap-x" style="scrollbar-color: #672F2F #FAF5EF;">
+                <div class="flex w-max gap-3 mb-5">
+                    <!-- item 1 -->
+                    <a href="/src/pages/detailDestinationPages/Pantai_Laut/rajaAmpat.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/rajaAmpat.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Raja Ampat</h3>
+                            <p class="font-normal text-sm">Papua Barat, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 2 -->
+                    <a href="/src/pages/detailDestinationPages/Pantai_Laut/giliTrawangan.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/giliTrawangan.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base"> Gili Trawangan</h3>
+                            <p class="font-normal text-sm">NTB, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 3 -->
+                    <a href="/src/pages/detailDestinationPages/Pantai_Laut/pantaiPink.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/pantaiPink.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Pantai Pink</h3>
+                            <p class="font-normal text-sm">NTT, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 4 -->
+                    <a href="/src/pages/detailDestinationPages/Pantai_Laut/pulauDerawan.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/pulauDerawan.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Pulau Derawan</h3>
+                            <p class="font-normal text-sm">Kalimantan Timur, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 5 -->
+                    <a href="/src/pages/detailDestinationPages/Pantai_Laut/nusaPenida.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/nusaPenida.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Nusa Penida</h3>
+                            <p class="font-normal text-sm">Bali, indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 6 -->
+                    <a href="/src/pages/detailDestinationPages/Pantai_Laut/bunaken.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/pulauBunaken.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Pulau Bunaken</h3>
+                            <p class="font-normal text-sm">Sulawesi Utara, Indonesia</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="px-6 lg:mx-32 mt-28 lg:mt-32" data-aos="fade-down">
+            <h1 class="font-bold text-xl md:text-2xl xl:text-3xl">Destinasi Wisata Budaya & Sejarah</h1>
+
+            <div class="mt-3 lg:mt-5 w-full overflow-x-auto snap-x" style="scrollbar-color: #672F2F #FAF5EF;">
+                <div class="flex w-max gap-3 mb-5">
+                    <!-- item 1 -->
+                    <a href="/src/pages/detailDestinationPages/Sejarah_Budaya/puraUlunDanu.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/puraUlunDanu.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Pura Ulun Danu</h3>
+                            <p class="font-normal text-sm">Bali, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 2 -->
+                    <a href="/src/pages/detailDestinationPages/Sejarah_Budaya/borobudur.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/candiBorobudur.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Candi Borobudur</h3>
+                            <p class="font-normal text-sm">Jawa Tengah, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 3 -->
+                    <a href="/src/pages/detailDestinationPages/Sejarah_Budaya/prambanan.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/candiPrambanan.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Candi Prambanan</h3>
+                            <p class="font-normal text-sm">Yogyakarta, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 4 -->
+                    <a href="/src/pages/detailDestinationPages/Sejarah_Budaya/waeRebo.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/waeRebo.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Desa Wae Rebo</h3>
+                            <p class="font-normal text-sm">NTT, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 5 -->
+                    <a href="/src/pages/detailDestinationPages/Sejarah_Budaya/jamGadang.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/jamGadang.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Jam Gadang</h3>
+                            <p class="font-normal text-sm">Sumatera Barat, Indonesia</p>
+                        </div>
+                    </a>
+                    <!-- item 6 -->
+                    <a href="/src/pages/detailDestinationPages/Sejarah_Budaya/fortRotterdam.html"
+                        class="snap-center group cursor-pointer active:scale-95 transition group">
+                        <div class="w-56 h-56 lg:h-72 lg:w-72 rounded-lg overflow-hidden">
+                            <img src="../assets/img/destination/destinationPages/fortRotterdam.png"
+                                class="w-full h-full object-cover rounded-lg brightness-95 group-hover:scale-110 overflow-visible transition"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="mt-2">
+                            <h3 class="font-semibold text-base">Benteng Fort Rotterdam</h3>
+                            <p class="font-normal text-sm">Sulawesi Selatan, Indonesia</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- footer -->
+        <div class="mt-32 lg:mt-40 bg-[#D7D1C9] py-10 flex flex-col items-center gap-2 shadow-lg" id="contact">
+            <div class="w-44 md:w-48 lg:w-52">
+                <img src="../assets/img/logo/vertical.png" alt="" class="h-full w-full object-cover">
+            </div>
+            <div class="text-[#672F2F] text-2xl lg:text-3xl flex gap-7 lg:gap-9 items-center">
+                <a class="hover:scale-110 active:scale-95 hover:text-[#7b947e] transition-all"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a class="hover:scale-110 active:scale-95 hover:text-[#7b947e] transition-all"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a class="hover:scale-110 active:scale-95 hover:text-[#7b947e] transition-all"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a class="hover:scale-110 active:scale-95 hover:text-[#7b947e] transition-all"><i
+                        class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div class="text-[#672F2F] mt-5 text-xs md:text-sm">
+                <p>&#169; 2024 nusantara journey / all right reserved. / privacy</p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

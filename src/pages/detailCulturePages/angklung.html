@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nusantara Journey</title>
+    <link rel="icon" type="image/x-icon" href="/src/assets/img/logo/logo.png">
+    <link rel="stylesheet" href="/src/assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body class="bg-[#FAF5EF] text-[#7b947e] font-poppins">
+    <!-- navigation -->
+    <div x-data="{open : false}" class="sticky top-0 left-0 w-full z-50">
+        <nav
+            class="sticky top-0 left-0 w-full z-50  px-8 md:px-16 py-1  text-[#7b947e] backdrop-blur-sm bg-gray-400/25 drop-shadow-md">
+            <div class="flex justify-between md:justify-center lg:justify-between items-center">
+                <div class="h-12 hidden xl:block">
+                    <img src="/src/assets/img/logo/horizontal.png" alt="" class=" w-full h-full object-cover ">
+                </div>
+                <div class="h-10 xl:hidden">
+                    <img src="/src/assets/img/logo/logo.png" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="md:hidden">
+                    <button @click="open = !open" class="active:scale-95 transition-all">
+                        <i class="fa-solid fa-bars text-2xl hover:scale-105"></i>
+                    </button>
+                </div>
+                <div class="hidden gap-2 font-bold md:flex">
+                    <a href="/src/pages/index.html"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Home</a>
+                    <a href="/src/pages/index.html#destination"
+                        class="hover:border-b-4 hover:border-[#7b947e] px-7 py-2 m-2 transition-all">Destinasi</a>
+                    <a href="/src/pages/index.html#culture"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Budaya</a>
+                    <a href="/src/pages/index.html#culinary"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Kuliner</a>
+                    <a href="/src/pages/index.html#contact"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <div x-show="open" x-transition
+            class="w-full flex flex-col items-center absolute top-12 z-50 text-[#7b947e] backdrop-blur-sm bg-gray-400/25 drop-shadow-md">
+            <a href="/src/pages/index.html"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Home</a>
+            <a href="/src/pages/index.html#destination"
+                class="hover:border-b-4 hover:border-[#7b947e] px-7 py-2 m-2 transition-all">Destinasi</a>
+            <a href="/src/pages/index.html#culture"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Budaya</a>
+            <a href="/src/pages/index.html#culinary"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Kuliner</a>
+            <a href="/src/pages/index.html#contact"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Contact</a>
+        </div>
+    </div>
+
+
+    <section class="mx-7 mt-8 md:mx-12 lg:mx-16 xl:mx-32">
+        <a href="/src/pages/culture.html"
+            class="flex items-center gap-2 text-base lg:text-lg hover:text-[#672F2F] transition">
+            <i class="fa-solid fa-angle-left"></i>
+            <p class="font-medium">Kembali ke Kebudayaan Indonesia</p>
+        </a>
+
+        <div class="mt-8 mx-auto">
+            <div class="h-56 md:h-72 lg:h-80 xl:h-96" data-aos="zoom-in">
+                <img src="/src/assets/img//culture/culturePages/angklung.jpg" alt=""
+                    class="w-full h-full object-cover lg:object-bottom rounded-md">
+            </div>
+            <div class="mt-3 md:mt-5 lg:mt-8">
+                <h1 class="font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl">Angklung</h1>
+                <p class="font-medium text-sm md:text-base lg:text-lg xl:text-xl">Melodi Tradisional dari Jawa Barat
+                </p>
+            </div>
+            <hr class="h-px my-8 bg-[#99B19C] border-0">
+            <div class="flex flex-col gap-5 text-left text-base lg:text-lg mb-12 lg:mb-14">
+                <p>Angklung adalah alat musik tradisional yang berasal dari Jawa Barat, Indonesia. Terbuat dari tabung
+                    bambu yang digantung pada bingkai kayu, angklung menghasilkan suara melodi yang khas dan harmonis
+                    ketika digoyangkan. Alat musik ini sering dimainkan dalam ansambel, di mana beberapa angklung
+                    digabungkan untuk menciptakan harmoni yang indah. Angklung telah menjadi simbol kekayaan budaya
+                    Indonesia dan dikenal di seluruh dunia sebagai salah satu contoh keunikan seni musik tradisional
+                    Nusantara.</p>
+                <p>Salah satu daya tarik utama angklung adalah harmoni dan teknik permainan yang sederhana namun
+                    efektif. Setiap angklung menghasilkan nada tertentu, dan dalam pertunjukan, berbagai angklung
+                    digabungkan untuk membentuk melodi yang menyenangkan. Pemain angklung menggoyangkan alat musik
+                    dengan teknik tertentu untuk menghasilkan suara yang jernih dan resonan. Permainan angklung
+                    memerlukan koordinasi dan keahlian, karena setiap pemain harus memastikan bahwa nada yang dihasilkan
+                    sesuai dengan komposisi musik. Angklung juga sering dimainkan dalam berbagai genre musik, dari musik
+                    tradisional hingga pop, menjadikannya alat musik yang fleksibel dan menarik.</p>
+                <p>Angklung bukan hanya alat musik, tetapi juga warisan budaya dan simbol komunitas yang mendalam.
+                    Angklung memiliki peran penting dalam upacara adat, perayaan, dan acara budaya di Jawa Barat. Dalam
+                    sejarahnya, angklung awalnya digunakan dalam ritual keagamaan dan sebagai media untuk menghubungkan
+                    masyarakat dengan dunia spiritual. Kini, angklung juga diakui secara internasional sebagai Warisan
+                    Budaya Takbenda oleh UNESCO, yang menunjukkan pentingnya alat musik ini dalam konteks global. Dengan
+                    melodi yang khas dan makna budaya yang mendalam, angklung terus memainkan peran penting dalam
+                    melestarikan dan mempromosikan budaya Indonesia kepada dunia.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer -->
+    <div class="mt-32 lg:mt-40 bg-[#D7D1C9] py-10 flex flex-col items-center gap-2 shadow-lg" id="contact">
+        <div class="w-44 md:w-48 lg:w-52">
+            <img src="/src/assets/img/logo/vertical.png" alt="" class="h-full w-full object-cover">
+        </div>
+        <div class="text-[#672F2F] text-2xl lg:text-3xl flex gap-7 lg:gap-9 items-center">
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-youtube"></i></a>
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <div class="text-[#672F2F] mt-5 text-xs md:text-sm">
+            <p>&#169; 2024 nusantara journey / all right reserved. / privacy</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="../assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

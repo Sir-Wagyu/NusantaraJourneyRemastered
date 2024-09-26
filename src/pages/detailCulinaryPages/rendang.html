@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nusantara Journey</title>
+    <link rel="icon" type="image/x-icon" href="/src/assets/img/logo/logo.png">
+    <link rel="stylesheet" href="/src/assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body class="bg-[#FAF5EF] text-[#7b947e] font-poppins">
+    <!-- navigation -->
+    <div x-data="{open : false}" class="sticky top-0 left-0 w-full z-50">
+        <nav
+            class="sticky top-0 left-0 w-full z-50  px-8 md:px-16 py-1  text-[#7b947e] backdrop-blur-sm bg-gray-400/25 drop-shadow-md">
+            <div class="flex justify-between md:justify-center lg:justify-between items-center">
+                <div class="h-12 hidden xl:block">
+                    <img src="/src/assets/img/logo/horizontal.png" alt="" class=" w-full h-full object-cover ">
+                </div>
+                <div class="h-10 xl:hidden">
+                    <img src="/src/assets/img/logo/logo.png" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="md:hidden">
+                    <button @click="open = !open" class="active:scale-95 transition-all">
+                        <i class="fa-solid fa-bars text-2xl hover:scale-105"></i>
+                    </button>
+                </div>
+                <div class="hidden gap-2 font-bold md:flex">
+                    <a href="/src/pages/index.html"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Home</a>
+                    <a href="/src/pages/index.html#destination"
+                        class="hover:border-b-4 hover:border-[#7b947e] px-7 py-2 m-2 transition-all">Destinasi</a>
+                    <a href="/src/pages/index.html#culture"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Budaya</a>
+                    <a href="/src/pages/index.html#culinary"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Kuliner</a>
+                    <a href="/src/pages/index.html#contact"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <div x-show="open" x-transition
+            class="w-full flex flex-col items-center absolute top-12 z-50 text-[#7b947e] backdrop-blur-sm bg-gray-400/25 drop-shadow-md">
+            <a href="/src/pages/index.html"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Home</a>
+            <a href="/src/pages/index.html#destination"
+                class="hover:border-b-4 hover:border-[#7b947e] px-7 py-2 m-2 transition-all">Destinasi</a>
+            <a href="/src/pages/index.html#culture"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Budaya</a>
+            <a href="/src/pages/index.html#culinary"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Kuliner</a>
+            <a href="/src/pages/index.html#contact"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Contact</a>
+        </div>
+    </div>
+
+
+    <section class="mx-7 mt-8 md:mx-12 lg:mx-16 xl:mx-32">
+        <a href="/src/pages/culinary.html"
+            class="flex items-center gap-2 text-base lg:text-lg hover:text-[#672F2F] transition">
+            <i class="fa-solid fa-angle-left"></i>
+            <p class="font-medium">Kembali ke Kuliner Indonesia</p>
+        </a>
+
+        <div class="mt-8 mx-auto">
+            <div class="h-56 md:h-72 lg:h-80 xl:h-96" data-aos="zoom-in">
+                <img src="/src/assets/img/culinary/culinaryPages/rendang.jpg" alt=""
+                    class="w-full h-full object-cover lg:object-bottom rounded-md">
+            </div>
+            <div class="mt-3 md:mt-5 lg:mt-8">
+                <h1 class="font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl">Rendang</h1>
+                <p class="font-medium text-sm md:text-base lg:text-lg xl:text-xl">Cita Rasa Autentik dari Ranah Minang
+                </p>
+            </div>
+            <hr class="h-px my-8 bg-[#99B19C] border-0">
+            <div class="flex flex-col gap-5 text-left text-base lg:text-lg mb-12 lg:mb-14">
+                <p>Rendang adalah salah satu warisan kuliner paling berharga dari Indonesia, yang berasal dari
+                    Minangkabau, Sumatra Barat. Hidangan ini terkenal dengan cita rasa yang kaya dan proses memasak yang
+                    panjang, menjadikannya ikon masakan tradisional Indonesia. Dimasak perlahan dengan api kecil selama
+                    beberapa jam, daging sapi yang digunakan dalam Rendang menjadi sangat empuk dan penuh dengan bumbu
+                    rempah yang meresap sempurna. Bahan-bahan utama seperti santan, serai, daun jeruk, dan cabai,
+                    memberikan cita rasa yang kompleks dan mendalam, menjadikannya hidangan yang sangat dihargai di
+                    seluruh dunia.</p>
+                <p>Sejarah Rendang berakar dari tradisi kuliner masyarakat Minangkabau yang kental dengan nilai-nilai
+                    budaya. Hidangan ini sering disajikan dalam berbagai upacara adat dan perayaan penting, seperti
+                    pernikahan dan hari raya. Proses memasak Rendang yang memakan waktu lama mencerminkan kesabaran dan
+                    dedikasi, sebuah nilai yang sangat dihormati dalam budaya Minangkabau. Selain itu, Rendang juga
+                    menjadi simbol kebanggaan daerah, dengan berbagai variasi yang muncul di seluruh Indonesia, termasuk
+                    Rendang ayam, Rendang jengkol, dan bahkan variasi vegetarian, yang menunjukkan fleksibilitas dan
+                    keunikan setiap versi regionalnya.</p>
+                <p>Rendang tidak hanya memikat hati masyarakat Indonesia tetapi juga mendapat pengakuan internasional.
+                    CNN International pernah menobatkan Rendang sebagai salah satu makanan terenak di dunia, sebuah
+                    prestasi yang membanggakan bagi kuliner Indonesia. Di luar negeri, popularitas Rendang terus
+                    meningkat, dengan banyak restoran dan koki terkenal memperkenalkan hidangan ini ke berbagai belahan
+                    dunia. Bagi mereka yang ingin mencoba membuat Rendang di rumah, tips penting termasuk menggunakan
+                    santan segar dan memasak dengan sabar untuk mencapai tekstur dan rasa yang autentik. Rendang, dengan
+                    kelezatannya yang tak tertandingi, benar-benar merupakan kuliner yang wajib dicoba dan dinikmati.
+                </p>
+            </div>
+            <div class=" mt-3">
+                <details class="cursor-pointer bg-[#99B19C] lg:text-lg rounded-xl overflow-hidden">
+                    <summary
+                        class="text-[#FAF5EF] list-none flex items-center gap-4 font-semibold py-3 px-4 select-none">
+                        <i class="fa-solid fa-caret-right"></i>Resep Membuat Rendang
+                    </summary>
+                    <div class="py-8 lg:py-9 px-10 bg-[#a7bbaa] text-[#FAF5EF]">
+                        <div class="mb-6">
+                            <p class="font-semibold mb-1">Bahan - Bahan :</p>
+                            <ul class="list-inside list-disc">
+                                <li>200 gram daging sapi, potong dadu</li>
+                                <li>200 ml santan</li>
+                                <li>1 batang serai, memarkan</li>
+                                <li>2 lembar daun jeruk</li>
+                                <li>1 lembar daun salam</li>
+                                <li>3 butir bawang merah, haluskan</li>
+                                <li>2 siung bawang putih, haluskan</li>
+                                <li>3 buah cabai merah keriting, haluskan</li>
+                                <li>1 cm jahe, haluskan</li>
+                                <li>1 cm lengkuas, haluskan</li>
+                                <li>1/2 sdt garam</li>
+                                <li>1/2 sdt gula merah</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-1">Cara Memasak :</p>
+                            <ul class="list-inside list-decimal text-justify">
+                                <li>Siapkan semua bahan dan bumbu yang telah dihaluskan.</li>
+                                <li>Panaskan sedikit minyak di wajan, tumis bumbu halus bersama serai, daun jeruk, dan
+                                    daun salam hingga harum.</li>
+                                <li>Masukkan potongan daging sapi, aduk hingga berubah warna.</li>
+                                <li>Tuang santan ke dalam wajan, aduk perlahan hingga mendidih. Kecilkan api dan masak
+                                    perlahan.</li>
+                                <li>Masak dengan api kecil sambil sesekali diaduk hingga santan mengental dan bumbu
+                                    meresap sempurna ke dalam daging. Proses ini memakan waktu sekitar 2-3 jam.</li>
+                                <li>Setelah daging empuk dan bumbu mengering, angkat dan sajikan Rendang dengan nasi
+                                    hangat.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer -->
+    <div class="mt-32 lg:mt-40 bg-[#D7D1C9] py-10 flex flex-col items-center gap-2 shadow-lg" id="contact">
+        <div class="w-44 md:w-48 lg:w-52">
+            <img src="/src/assets/img/logo/vertical.png" alt="" class="h-full w-full object-cover">
+        </div>
+        <div class="text-[#672F2F] text-2xl lg:text-3xl flex gap-7 lg:gap-9 items-center">
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-youtube"></i></a>
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <div class="text-[#672F2F] mt-5 text-xs md:text-sm">
+            <p>&#169; 2024 nusantara journey / all right reserved. / privacy</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="../assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

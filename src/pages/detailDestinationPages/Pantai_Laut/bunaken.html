@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nusantara Journey</title>
+    <link rel="icon" type="image/x-icon" href="/src/assets/img/logo/logo.png">
+    <link rel="stylesheet" href="/src/assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body class="bg-[#FAF5EF] text-[#7b947e] font-poppins">
+    <!-- navigation -->
+    <div x-data="{open : false}" class="sticky top-0 left-0 w-full z-50">
+        <nav
+            class="sticky top-0 left-0 w-full z-50  px-8 md:px-16 py-1  text-[#7b947e] backdrop-blur-sm bg-gray-400/25 drop-shadow-md">
+            <div class="flex justify-between md:justify-center lg:justify-between items-center">
+                <div class="h-12 hidden xl:block">
+                    <img src="/src/assets/img/logo/horizontal.png" alt="" class=" w-full h-full object-cover ">
+                </div>
+                <div class="h-10 xl:hidden">
+                    <img src="/src/assets/img/logo/logo.png" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="md:hidden">
+                    <button @click="open = !open" class="active:scale-95 transition-all">
+                        <i class="fa-solid fa-bars text-2xl hover:scale-105"></i>
+                    </button>
+                </div>
+                <div class="hidden gap-2 font-bold md:flex">
+                    <a href="/src/pages/index.html"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Home</a>
+                    <a href="/src/pages/index.html#destination"
+                        class="hover:border-b-4 hover:border-[#7b947e] px-7 py-2 m-2 transition-all">Destinasi</a>
+                    <a href="/src/pages/index.html#culture"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Budaya</a>
+                    <a href="/src/pages/index.html#culinary"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Kuliner</a>
+                    <a href="/src/pages/index.html#contact"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <div x-show="open" x-transition
+            class="w-full flex flex-col items-center sticky top-12 z-50 text-[#7b947e] backdrop-blur-sm bg-gray-400/25 drop-shadow-md">
+            <a href="/src/pages/index.html"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Home</a>
+            <a href="/src/pages/index.html#destination"
+                class="hover:border-b-4 hover:border-[#7b947e] px-7 py-2 m-2 transition-all">Destinasi</a>
+            <a href="/src/pages/index.html#culture"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Budaya</a>
+            <a href="/src/pages/index.html#culinary"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Kuliner</a>
+            <a href="/src/pages/index.html#contact"
+                class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Contact</a>
+        </div>
+    </div>
+
+    <section class="mx-7 mt-8 md:mx-12 lg:mx-16 xl:mx-32">
+        <a href="/src/pages/destination.html"
+            class="flex items-center gap-2 text-base lg:text-lg hover:text-[#672F2F] transition">
+            <i class="fa-solid fa-angle-left"></i>
+            <p class="font-medium">Kembali ke Destinasi Wisata</p>
+        </a>
+
+        <div class="mt-8 mx-auto">
+            <div class="h-56 md:h-72 lg:h-80 xl:h-96" data-aos="zoom-in">
+
+                <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-56 overflow-hidden rounded-lg md:h-72 lg:h-80 xl:h-[30rem]">
+                        <!-- Item 1 -->
+                        <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                            <img src="/src/assets/img/destination/destinationPages/pulauBunaken1.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                            <img src="/src/assets/img/destination/destinationPages/pulauBunaken2.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                            <img src="/src/assets/img/destination/destinationPages/pulauBunaken3.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
+                    </div>
+
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-[#FAF5EF] dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-[#FAF5EF] dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="mt-3 md:mt-5 lg:mt-8 xl:mt-32">
+                <h1 class="font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl">Taman Nasional Bunaken</h1>
+                <p class="font-medium text-sm md:text-base lg:text-lg xl:text-xl">Kehidupan bawah laut yang luar biasa
+                </p>
+            </div>
+            <hr class="h-px my-8 bg-[#99B19C] border-0">
+            <div class="flex flex-col gap-5 text-left text-base lg:text-lg">
+                <p>Pulau Bunaken adalah permata tersembunyi di utara Sulawesi, dikenal sebagai salah satu destinasi
+                    utama untuk snorkeling dan diving di Indonesia. Bagian dari Taman Nasional Bunaken, pulau ini
+                    memiliki ekosistem bawah laut yang sangat kaya, termasuk terumbu karang yang menakjubkan dan spesies
+                    ikan tropis yang melimpah. Air laut yang sangat jernih memungkinkan para penyelam untuk menikmati
+                    pemandangan terumbu karang yang berwarna-warni dan kehidupan laut yang beragam, menjadikannya tempat
+                    yang ideal untuk mengeksplorasi keindahan alam bawah laut.</p>
+                <p>Keunikan Pulau Bunaken terletak pada dinding-dinding terumbu karangnya yang menakjubkan, sering
+                    disebut sebagai "Wall Diving." Penyelam dapat menjelajahi tebing-tebing vertikal yang dipenuhi
+                    dengan formasi karang yang kompleks dan spesies laut yang menarik. Di kedalaman laut, Anda mungkin
+                    bertemu dengan ikan napoleon yang megah, hiu karang yang anggun, atau penyu laut yang berenang
+                    perlahan. Setiap penyelaman di Pulau Bunaken adalah perjalanan visual yang menyuguhkan keindahan
+                    yang tiada tara, menawarkan pengalaman yang mendalam dan penuh warna di dunia bawah laut.</p>
+                <p>Tidak hanya dunia bawah laut yang menawan, Pulau Bunaken juga menawarkan pantai-pantai yang tenang
+                    dengan pasir putih yang halus dan air laut yang bersih. Di darat, pulau ini memberikan suasana damai
+                    yang cocok untuk bersantai dan menikmati keindahan alam. Masyarakat lokal yang ramah serta budaya
+                    yang kaya menambah daya tarik Pulau Bunaken, menjadikannya destinasi yang menawarkan pengalaman yang
+                    lengkap. Menjelajahi pulau ini memungkinkan Anda untuk merasakan pesona luar biasa baik di bawah air
+                    maupun di atas darat, membuatnya menjadi tempat yang tak terlupakan untuk dikunjungi.</p>
+            </div>
+            <hr class="h-px my-8 bg-[#99B19C] border-0">
+            <div class="lg:w-3/4 mt-3">
+                <p class="font-semibold text-base lg:text-lg xl:text-xl">Lokasi :</p>
+                <iframe class="mt-3 border-0 w-full h-56 md:h-64 lg:h-72 xl:h-80"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90242.29866103955!2d124.72731907542811!3d1.6400860560543082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d7873db0880843f%3A0x606df49ef663eff7!2sBunaken%20National%20Marine%20Park!5e0!3m2!1sen!2sid!4v1722939241362!5m2!1sen!2sid"></iframe>
+                <a href="https://maps.app.goo.gl/Si3iYameKEJ4BkHh7" target="_blank"
+                    class="bg-[#672F2F] text-[#D7D1C9] mt-6 lg:mt-10 block text-center px-8 py-3 lg:py-4 lg:w-72 rounded-full font-medium text-sm lg:text-base hover:bg-[#99B19C] hover:scale-105 active:scale-95 transition">Simpan
+                    Lokasinya!</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer -->
+    <div class="mt-32 lg:mt-40 bg-[#D7D1C9] py-10 flex flex-col items-center gap-2 shadow-lg" id="contact">
+        <div class="w-44 md:w-48 lg:w-52">
+            <img src="/src/assets/img/logo/vertical.png" alt="" class="h-full w-full object-cover">
+        </div>
+        <div class="text-[#672F2F] text-2xl lg:text-3xl flex gap-7 lg:gap-9 items-center">
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-youtube"></i></a>
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <div class="text-[#672F2F] mt-5 text-xs md:text-sm">
+            <p>&#169; 2024 nusantara journey / all right reserved. / privacy</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="../assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

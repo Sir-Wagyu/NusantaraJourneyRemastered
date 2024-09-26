@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nusantara Journey</title>
+    <link rel="icon" type="image/x-icon" href="src/assets/img/logo/logo.png">
+    <link rel="stylesheet" href="src/assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body class="bg-[#FAF5EF] font-poppins">
+    <!-- home -->
+    <div class="relative bg-cover h-screen" id="home">
+        <!-- content -->
+        <div class="flex flex-col justify-center items-center mx-4 max-auto py-56 h-full absolute inset-0 z-10 text-[#D7D1C9]"
+            data-aos="zoom-in" data-aos-duration="500">
+            <img src="/src/assets/img/logo/vertical.png" alt="" class="h-28 lg:h-32">
+            <h1
+                class="uppercase text-3xl md:text-5xl lg:text-7xl xl:mx-40 font-semibold text-center leading-snug font-lora tracking-wider">
+                it's time to discover<span class=""><br></span><span class="typing-text"></span>
+            </h1>
+            <a href="#destination"
+                class="mt-8 md:mt-10 lg:mt-12 xl:mt-16 px-12 md:px-14 lg:px-16 xl:px-20 py-2 lg:py-3 xl:py-4 text-base md:text-lg lg:text-xl xl:text-2xl font-semibold border-2 lg:border-[3px] border-[#D7D1C9] hover:bg-[#672F2F] active:scale-95 transition-all rounded-full animate-blink">
+                <p>Let's Go!</p>
+            </a>
+        </div>
+
+        <!-- background -->
+        <div class="relative h-full">
+            <!-- video jumbotron -->
+            <!-- <video autoplay loop muted plays-inline class="w-full h-full object-cover brightness-[.30]">
+                <source src="/src/assets/vid/jumbotron1.mp4" type="video/mp4">
+            </video> -->
+
+            <!-- image jumbotron -->
+            <img src="/src/assets/img/other/home-bg.png" alt="" class="h-full w-full object-cover brightness-[.30]"
+                loading="lazy">
+        </div>
+
+    </div>
+
+    <!-- navigation -->
+    <div x-data="{open : false}" class="sticky top-0 left-0 w-full z-50">
+        <nav
+            class="sticky top-0 left-0 w-full z-50  px-8 md:px-16 py-1  text-[#7b947e] backdrop-blur-sm bg-gray-400/25 drop-shadow-md">
+            <div class="flex justify-between md:justify-center lg:justify-between items-center">
+                <div class="h-12 hidden xl:block">
+                    <img src="src/assets/img/logo/horizontal.png" alt="" class=" w-full h-full object-cover ">
+                </div>
+                <div class="h-10 xl:hidden">
+                    <img src="src/assets/img/logo/logo.png" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="md:hidden">
+                    <button @click="open = !open" class="active:scale-95 transition-all">
+                        <i class="fa-solid fa-bars text-2xl hover:scale-105"></i>
+                    </button>
+                </div>
+                <div class="hidden gap-2 font-bold md:flex">
+                    <a href="#"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Home</a>
+                    <a href="#destination"
+                        class="hover:border-b-4 hover:border-[#7b947e] px-7 py-2 m-2 transition-all">Destinasi</a>
+                    <a href="#culture"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Budaya</a>
+                    <a href="#culinary"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Kuliner</a>
+                    <a href="#contact"
+                        class="hover:border-b-4 hover:border-[#7b947e] active:scale-95 px-7 py-2 m-2 transition-all">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <div x-show="open" x-transition
+            class="w-full flex flex-col items-center absolute top-12 left-0 z-50 text-[#99B19C] backdrop-blur-sm bg-gray-400/25 drop-shadow-md">
+            <a href="#"
+                class="hover:border-b-4 hover:border-[#99B19C] active:scale-95 px-7 py-2 m-2 transition-all">Home</a>
+            <a href="#destination"
+                class="hover:border-b-4 hover:border-[#99B19C] px-7 py-2 m-2 transition-all">Destinasi</a>
+            <a href="#culture"
+                class="hover:border-b-4 hover:border-[#99B19C] active:scale-95 px-7 py-2 m-2 transition-all">Budaya</a>
+            <a href="#culinary"
+                class="hover:border-b-4 hover:border-[#99B19C] active:scale-95 px-7 py-2 m-2 transition-all">Kuliner</a>
+            <a href="#contact"
+                class="hover:border-b-4 hover:border-[#99B19C] active:scale-95 px-7 py-2 m-2 transition-all">Contact</a>
+        </div>
+    </div>
+
+
+
+
+    <!-- halaman 2 -->
+    <div class="bg-[#FAF5EF] text-[#7b947e] flex flex-col justify-center items-center mx-7" id="destination"
+        data-aos="zoom-in">
+        <h1
+            class="font-bold text-center text-2xl md:text-4xl xl:text-5xl mt-20 md:mt-24 lg:28 xl:mt-32 font-lora tracking-wider">
+            Destinasi Wisata
+            <span class="hidden sm:inline">Terpopuler</span>
+        </h1>
+        <p class="font-normal text-base md:text-lg lg:text-xl text-center capitalize mb-5 lg:mb-8">Keindahan lokasi
+            ternama
+            yang
+            tersebar di
+            seluruh
+            Indonesia</p>
+    </div>
+
+    <div class="bg-[#FAF5EF]  flex justify-center items-center lg:gap-20 mb-28 md:mb-32 lg:mb-44 flex-col lg:flex-row"
+        id="destination" data-aos="fade-up">
+        <div class="w-1/2 pt-10 pb-10 pr-10 hidden lg:block">
+            <img src="src/assets/img/destination/pura.png" alt="" class="h-full object-contain" loading="lazy">
+        </div>
+        <div class="w-3/4 mt-8 lg:hidden">
+            <img src="src/assets/img/destination/pura2.png" class="h-full w-full object-cover rounded-lg"
+                loading="lazy">
+        </div>
+        <div class="w-3/4 lg:w-1/2 mt-5 lg:mt-0 text-[#7b947e]">
+            <p class="font-medium text-sm md:text-base lg:text-lg">Provinsi Bali</p>
+            <h1 class="font-semibold text-2xl md:text-3xl lg:text-4xl">Pura Ulun Danu Bratan</h1>
+            <p class="font-medium text-base lg:text-justify lg:text-lg mt-3 lg:w-4/5">
+                Dengan pura yang tampak mengapung di Danau Bratan dan panorama
+                pegunungan, menawarkan pemandangan spektakuler dan suasana spiritual mendalam. Destinasi ikonik ini
+                wajib dikunjungi di Pulau Dewata.</p>
+            <a href="/src/pages/other/puraUlunDanu.html"
+                class="cursor-pointer mt-7 lg:w-40 lg:h-12 px-10 py-2 rounded-full shadow-sm shadow-black/35 bg-[#672F2F] font-semibold text-base text-[#D7D1C9] hover:bg-[#99B19C] hover:scale-105 active:scale-95 flex justify-center items-center transition-all">
+                Selanjutnya
+            </a>
+        </div>
+    </div>
+
+    <div class="bg-[#FAF5EF] flex justify-center items-center lg:gap-10 mb-28 md:mb-32 lg:mb-44 flex-col lg:flex-row"
+        id="toba" data-aos="fade-up">
+        <div class="w-3/4 lg:w-1/2 text-[#7b947e] mt-5 lg:pl-24 order-2 lg:order-1">
+            <p class="font-medium text-sm md:text-base lg:text-lg">Provinsi Sumatera Utara</p>
+            <h1 class="font-semibold text-2xl md:text-3xl lg:text-4xl">Danau Toba</h1>
+            <p class="font-medium text-base lg:text-lg mt-3">Danau vulkanik terbesar di dunia yang
+                menawarkan
+                pemandangan
+                menakjubkan dengan air yang jernih dan suasana tenang di tengah pegunungan hijau dan Pulau Samosir yang
+                memikat. Destinasi ideal untuk relaksasi dan eksplorasi budaya Batak yang kaya.
+            </p>
+            <a href="/src/pages/other/toba.html"
+                class="cursor-pointer font-semibold mt-7 lg:w-40 lg:h-12 px-10 py-2 rounded-full shadow-sm shadow-black/35 bg-[#672F2F] text-base text-[#D7D1C9] hover:bg-[#99B19C] hover:scale-105 active:scale-95 flex justify-center items-center transition-all">
+                Selanjutnya
+            </a>
+        </div>
+        <div class="w-1/2 pt-10 pb-10 lr-10 hidden lg:block order-2">
+            <img src="src/assets/img/destination/toba.png" alt="" class="h-full object-contain" loading="lazy">
+        </div>
+        <div class="w-3/4 mt-8 lg:hidden order-1">
+            <img src="src/assets/img/destination/toba2.png" alt="" class="h-full w-full object-cover rounded-lg"
+                loading="lazy">
+        </div>
+    </div>
+
+    <div class="bg-[#FAF5EF] flex justify-center items-center lg:gap-10 mb-32 lg:mb-28 flex-col lg:flex-row"
+        id="rajaAmpat" data-aos="fade-up">
+        <div class="w-1/2 pt-10 pb-10 pr-10 hidden lg:block">
+            <img src="src/assets/img/destination/rajaAmpat.png" alt="" class="h-full object-contain" loading="lazy">
+        </div>
+        <div class="w-3/4 lg:hidden">
+            <img src="src/assets/img/destination/rajaAmpat2.png" alt="" class="h-full w-full object cover rounded-lg"
+                loading="lazy">
+        </div>
+        <div class="w-3/4 lg:w-1/2 mt-5 lg:mt-0 text-[#7b947e]">
+            <p class="font-medium text-sm md:text-base lg:text-lg">Provinsi Papua Barat</p>
+            <h1 class="font-semibold text-2xl md:text-3xl lg:text-4xl">Raja Ampat</h1>
+            <p class="font-medium text-base lg:text-lg mt-3 lg:w-4/5">Surga tersembunyi dengan lebih dari
+                1.500 pulau
+                kecil, terkenal sebagai salah satu tujuan menyelam terbaik di dunia. Terumbu karang yang spektakuler,
+                air
+                laut kristal, dan keanekaragaman hayati laut yang luar biasa menawarkan pengalaman tak terlupakan bagi
+                pecinta alam dan petualang.</p>
+            <a href="/src/pages/other/rajaAmpat.html"
+                class="cursor-pointer font-semibold mt-7 lg:w-40 lg:h-12 px-10 py-2 rounded-full shadow-sm shadow-black/35 bg-[#672F2F] text-base text-[#D7D1C9] hover:bg-[#99B19C] hover:scale-105 active:scale-95 flex justify-center items-center transition-all">
+                Selanjutnya
+            </a>
+        </div>
+    </div>
+
+    <div class="bg-[#FAF5EF] flex justify-center items-center md:mb-16 lg:mb-36" data-aos="zoom-in"
+        id="btn-destination">
+        <a href="src/pages/destination.html"
+            class="cursor-pointer w-5/6 lg:w-3/4 h-20 lg:h-32 relative overflow-hidden rounded-full group  active:scale-95 transition-all shadow-md shadow-slate-600">
+            <!-- background img -->
+            <img src="src/assets/img/other/candiBorobudur.jpg" alt=""
+                class="absolute w-full h-full object-cover overflow-visible group-hover:scale-110 brightness-50 transition-all"
+                loading="lazy">
+            <!-- content -->
+            <h1
+                class="text-[#D7D1C9] font-semibold text-base md:text-xl lg:text-2xl text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                Temukan Destinasi Wisata Populer Lainnya
+            </h1>
+            <!-- blur -->
+            <div class="h-full absolute inset-0 backdrop-blur-sm bg-black/0"></div>
+        </a>
+    </div>
+
+    <!-- halaman 3 -->
+    <div class="bg-[#FAF5EF] h-screen flex flex-col justify-center items-center lg:pb-20" id="culture">
+        <div class=" text-[#7b947e] flex justify-center items-center mt-16 lg:mt-28 mb-10 lg:mb-8 flex-col mx-7"
+            data-aos="zoom-in">
+            <h1 class="font-bold text-2xl md:text-4xl xl:text-5xl text-center font-lora tracking-wider"><span
+                    class="hidden md:inline ">Keajaiban</span> Kebudayaan Indonesia</h1>
+            <p class="font-normal text-base md:text-lg lg:text-xl text-center capitalize">Tradisi luhur yang menyimpan
+                berbagai keunikan</p>
+        </div>
+        <div id="default-carousel" class="relative h-72 md:h-96 lg:h-full w-full" data-carousel="Slide"
+            data-aos="zoom-in-down">
+            <!-- Carousel wrapper -->
+            <div class="relative h-full overflow-hidden">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="relative h-full w-full overflow-hidden ">
+                        <img src="src/assets/img/culture/batik.jpg" alt="" class="absolute w-full h-full object-cover"
+                            loading="lazy">
+                        <div
+                            class="absolute left-12 bottom-14 xl:left-24 xl:bottom-16 z-10 text-[#D7D1C9] w-3/4 xl:w-2/5 rounded-lg">
+                            <h1 class="font-semibold text-xl md:text-2xl xl:text-4xl mb-2 xl:mb-4">Batik</h1>
+                            <p class="text-sm md:hidden">Teknik unik menciptakan motif pada kain</p>
+                            <p class="text-justify xl:text-lg hidden md:block">Batik adalah teknik kuno Indonesia untuk
+                                menciptakan
+                                kain
+                                bermotif
+                                dengan
+                                menggunakan lilin sebagai perintang warna.<span class="hidden xl:inline">Motifnya
+                                    mencerminkan identitas budaya
+                                    dan
+                                    filosofi masyarakat setempat, digunakan dalam berbagai acara formal dan informal,
+                                    dan
+                                    diakui sebagai Warisan Budaya Takbenda UNESCO sejak 2009.</span></p>
+                        </div>
+                        <div class="h-full absolute inset-0 bg-gradient-to-tr from-gray-900/75 to-transparent">
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="relative h-full w-full overflow-hidden ">
+                        <img src="src/assets/img/culture/kecak.jpg" alt="" class="absolute w-full h-full object-cover"
+                            loading="lazy">
+                        <div
+                            class="absolute left-12 bottom-14 xl:left-24 xl:bottom-16 z-10 text-[#D7D1C9] w-3/4 xl:w-2/5 rounded-lg">
+                            <h1 class="font-semibold text-xl md:text-2xl xl:text-4xl mb-2 xl:mb-4">Tari Kecak</h1>
+                            <p class="text-sm md:hidden">Tarian tradisional dari Bali yang berisi kisah dan atraksi yang
+                                menakjubkan
+                            </p>
+                            <p class="text-justify xl:text-lg hidden md:block">Tarian tradisional Bali yang unik,
+                                menampilkan irama
+                                "cak" oleh
+                                sekelompok pria melingkar, mengisahkan kisah epik Ramayana terutama kisah Rama, Shinta,
+                                dan
+                                Hanuman. <span class="hidden xl:inline">Diperkenalkan pada 1930-an oleh Wayan Limbak dan
+                                    Walter Spies, tarian ini
+                                    mengandalkan suara penari sebagai pengiring ritmis dan narator, tanpa menggunakan
+                                    alat
+                                    musik.</span></p>
+                        </div>
+                        <div class="h-full absolute inset-0 bg-gradient-to-tr from-gray-900/75 to-transparent">
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="relative h-full w-full overflow-hidden ">
+                        <img src="src/assets/img/culture/reog.jpg" alt="" class="absolute w-full h-full object-cover"
+                            loading="lazy">
+                        <div
+                            class="absolute left-12 bottom-14 xl:left-24 xl:bottom-16 z-10 text-[#D7D1C9] w-3/4 xl:w-2/5 rounded-lg">
+                            <h1 class="font-semibold text-xl md:text-2xl xl:text-4xl mb-2 xl:mb-4">Tari Reog</h1>
+                            <p class="text-sm md:hidden">Tarian unik yang menampilkan penari topeng
+                                raksasa</p>
+                            <p class="text-justify xl:text-lg hidden md:block">Tarian tradisional dari Jawa Timur yang
+                                menampilkan
+                                penari dengan topeng
+                                "Singa Barong" berbulu merak, serta prajurit dan kuda lumping. <span
+                                    class="hidden xl:inline">Menggunakan musik gamelan
+                                    sebagai pengiringnya, tarian ini menceritakan tentang perjuangan dan kepahlawanan,
+                                    mencerminkan nilai-nilai spiritual dan budaya lokal.</span></p>
+                        </div>
+                        <div class="h-full absolute inset-0 bg-gradient-to-tr from-gray-900/75 to-transparent">
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="relative h-full w-full overflow-hidden ">
+                        <img src="src/assets/img/culture/tariPiring.jpg" alt=""
+                            class="absolute w-full h-full object-cover" loading="lazy">
+                        <div
+                            class="absolute left-12 bottom-14 xl:left-24 xl:bottom-16 z-10 text-[#D7D1C9] w-3/4 xl:w-2/5 rounded-lg">
+                            <h1 class="font-semibold text-xl md:text-2xl xl:text-4xl mb-2 xl:mb-4">Tari Piring</h1>
+                            <p class="text-sm md:hidden">Tarian Sumatera Barat yang menampilkan atraksi mengerikan
+                                sekaligus memukau</p>
+                            <p class="text-justify xl:text-lg hidden md:block">Tarian tradisional dari Sumatra Barat
+                                yang
+                                menggunakan piring
+                                sebagai properti
+                                utama
+                                yang digerakkan dengan cepat dan lincah oleh para penari, menghasilkan bunyi khas dari
+                                piring yang saling beradu. <span class="hidden xl:inline">Melambangkan rasa syukur dan
+                                    kebahagiaan, tarian ini sering
+                                    dipertunjukkan dalam acara adat dan perayaan, mencerminkan keanggunan budaya
+                                    Minangkabau.</span></p>
+                        </div>
+                        <div class="h-full absolute inset-0 bg-gradient-to-tr from-gray-900/75 to-transparent">
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="relative h-full w-full overflow-hidden ">
+                        <img src="src/assets/img/culture/gamelan.jpg" alt="" class="absolute w-full h-full object-cover"
+                            loading="lazy">
+                        <div
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-[#D7D1C9] w-3/4 flex flex-col justify-center items-center">
+                            <h1 class="font-semibold text-2xl xl:text-4xl text-center">TERTARIK UNTUK MEMPELAJARI BUDAYA
+                                LAINNYA?
+                            </h1>
+                            <a href="/src/pages/culture.html"
+                                class="font-bold text-base xl:text-lg px-16 py-3 rounded-full flex justify-center items-center mt-6 border-2 border-[#D7D1C9] hover:bg-[#672F2F] hover:scale-105 active:scale-95 transition-all">Jelajahi</a>
+                        </div>
+                        <div class="h-full absolute inset-0 backdrop-blur-sm bg-black/20">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                    data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                    data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                    data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                    data-carousel-slide-to="3"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                    data-carousel-slide-to="4"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button"
+                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev>
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 1 1 5l4 4" />
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button"
+                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-next>
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <!-- halaman 4 -->
+    <div class="h-screen bg-[#FAF5EF] md:mt-24 lg:mt-28 flex flex-col justify-center items-center mb-32 mx-7"
+        id="culinary">
+        <div class="text-center mb-10 text-[#7b947e]" data-aos="zoom-in">
+            <h1 class="capitalize font-bold text-2xl md:text-4xl xl:text-5xl font-lora tracking-wider">makanan khas
+                indonesia</h1>
+            <p class="font-normal text-base md:text-lg lg:text-xl capitalize">Kuliner yang kaya akan rempah
+                dan cita rasa
+                unik dari
+                berbagai daerah</p>
+        </div>
+
+        <div class="grid grid-cols-3 grid-rows-2 gap-2 lg:gap-3 w-full md:w-3/4 xl:w-[70%] h-1/2 md:h-2/3"
+            data-aos="zoom-in">
+            <!-- item 1 -->
+            <div
+                class="cursor-pointer relative overflow-hidden row-span-2 drop-shadow-md shadow-black rounded-xl group active:scale-95 transition">
+                <a href="other/rendang.html">
+                    <!-- background image -->
+                    <img src="src/assets/img/culinary/culinaryPages/rendang.jpg" alt=""
+                        class="absolute w-full h-full object-cover group-hover:scale-110 transition overflow-visible"
+                        loading="lazy">
+                    <!-- content -->
+                    <div
+                        class="absolute bottom-7 px-5 z-10 text-[#D7D1C9] flex items-center justify-center sm:justify-between w-full">
+                        <div>
+                            <h1 class="text-base lg:text-2xl font-semibold">Rendang</h1>
+                            <h1 class="font-light text-sm text-center md:text-left hidden md:block">Sumatera <span
+                                    class="hidden md:inline">Barat</span></h1>
+                        </div>
+                        <div class="hidden md:flex items-center">
+                            <i class="fa-solid fa-angle-right text-xl lg:text-3xl"></i>
+                        </div>
+                    </div>
+                    <!-- gradient -->
+                    <div class="h-full absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900"></div>
+                </a>
+            </div>
+            <!-- item 2 -->
+            <div
+                class="cursor-pointer relative overflow-hidden drop-shadow-md shadow-black rounded-xl group active:scale-95 transition">
+                <a href="other/gudeg.html">
+                    <!-- background image -->
+                    <img src="src/assets/img/culinary/gudeg.jpg" alt=""
+                        class="absolute w-full h-full object-cover group-hover:scale-110 transition overflow-visible"
+                        loading="lazy">
+                    <!-- content -->
+                    <div
+                        class="absolute bottom-7 px-5 z-10 text-[#D7D1C9] flex items-center justify-center sm:justify-between w-full">
+                        <div>
+                            <h1 class="text-base lg:text-2xl font-semibold text-center sm:text-left">Gudeg
+                            </h1>
+                            <h1 class="font-light text-sm text-center sm:text-left hidden md:block">Yogyakarta</h1>
+                        </div>
+                        <div class="hidden md:flex items-center">
+                            <i class="fa-solid fa-angle-right text-xl lg:text-3xl"></i>
+                        </div>
+                    </div>
+                    <!-- gradient -->
+                    <div class="h-full absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900"></div>
+                </a>
+            </div>
+            <!-- item 3 -->
+            <div
+                class="cursor-pointer relative overflow-hidden drop-shadow-md shadow-black rounded-xl group active:scale-95 transition">
+                <a href="other/kerakTelor.html">
+                    <!-- background image -->
+                    <img src="src/assets/img/culinary/kerakTelor.jpg" alt=""
+                        class="absolute w-full h-full object-cover group-hover:scale-110 transition overflow-visible"
+                        loading="lazy">
+                    <!-- content -->
+                    <div
+                        class="absolute bottom-7 px-5 z-10 text-[#D7D1C9] flex items-center justify-center md:justify-between w-full">
+                        <div>
+                            <h1 class="text-base lg:text-2xl text-center sm:text-left font-semibold">Kerak Telor</h1>
+                            <h1 class="font-light text-sm text-center sm:text-left hidden md:block">Jakarta</h1>
+                        </div>
+                        <div class="hidden md:flex items-center">
+                            <i class="fa-solid fa-angle-right text-xl lg:text-3xl"></i>
+                        </div>
+                    </div>
+                    <!-- gradient -->
+                    <div class="h-full absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900"></div>
+                </a>
+            </div>
+            <!-- item 4 -->
+            <div
+                class="cursor-pointer col-span-2 col-start-2 relative overflow-hidden drop-shadow-md shadow-black rounded-xl group active:scale-95 transition">
+                <a href="other/papeda.html">
+                    <!-- background image -->
+                    <img src="src/assets/img/culinary/papeda.jpg" alt=""
+                        class="absolute w-full h-full object-cover group-hover:scale-110 transition overflow-visible"
+                        loading="lazy">
+                    <!-- content -->
+                    <div
+                        class="absolute bottom-7 px-5 z-10 text-[#D7D1C9] flex items-center justify-center md:justify-between w-full">
+                        <div>
+                            <h1 class="text-base lg:text-2xl text-center sm:text-left font-semibold">Papeda</h1>
+                            <h1 class="font-light text-sm text-center sm:text-left hidden md:block">Papua</h1>
+                        </div>
+                        <div class="hidden md:block">
+                            <i class="fa-solid fa-angle-right text-3xl"></i>
+                        </div>
+                    </div>
+                    <!-- gradient -->
+                    <div class="h-full absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900"></div>
+                </a>
+            </div>
+        </div>
+        <a href="/src/pages/culinary.html"
+            class="cursor-pointer mt-5 flex justify-center items-center bg-[#672F2F] text-[#D7D1C9] font-semibold text-base text-center px-12 py-2 lg:px-14 lg:py-3 rounded-full shadow-sm shadow-black/35 hover:bg-[#99B19C] hover:scale-105 active:scale-95 transition-all">
+            Lainnya
+        </a>
+    </div>
+
+    <!-- footer -->
+    <div class="bg-[#D7D1C9] py-10 flex flex-col items-center gap-2 shadow-lg" id="contact">
+        <div class="w-44 md:w-48 lg:w-52">
+            <img src="src/assets/img/logo/vertical.png" alt="" class="h-full w-full object-cover">
+        </div>
+        <div class="text-[#672F2F] text-2xl lg:text-3xl flex gap-7 lg:gap-9 items-center">
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-youtube"></i></a>
+            <a class="hover:scale-110 active:scale-95 hover:text-[#99B19C] transition-all"><i
+                    class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <div class="text-[#672F2F] mt-5 text-xs md:text-sm">
+            <p>&#169; 2024 nusantara journey / all right reserved. / privacy</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        AOS.init();
+
+        var typed = new Typed('.typing-text', {
+            strings: ['Indonesia'],
+            loop: true,
+            typeSpeed: 85,
+            startDelay: 1400,
+            backSpeed: 70,
+            backDelay: 3000,
+        });
+    </script>
+</body>
+
+</html>
