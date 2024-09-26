@@ -21,7 +21,7 @@ The design of Nusantara Journey uses a calm, earthy color palette that reflects 
 
 - **Frontend**: HTML, CSS, Tailwind CSS, JavaScript (React.js)
 - **Backend**: Not implemented (static site)
-- **Deployment**: Hosted on [GitHub Pages / Vercel] (Update with your deployment platform)
+- **Deployment**: Hosted on Netlify 
 
 ## Usage
 
@@ -33,7 +33,12 @@ Contributions are welcome! If you have ideas for improvements or new features, f
 
 ## Screenshot
 
-![Nusantara Journey Screenshot](link-to-screenshot.png)
+![Nusantara Journey Screenshot](https://www.imghippo.com/i/3PBGg1727362628.png)
+![Nusantara Journey Screenshot](https://www.imghippo.com/i/GEpUn1727362692.png)
+![Nusantara Journey Screenshot](https://www.imghippo.com/i/1T9A61727362722.png)
+![Nusantara Journey Screenshot](https://www.imghippo.com/i/tD4QN1727362746.png)
+
+You can view the live site here: [Nusantara Journey on Netlify](https://nusantara-journey.netlify.app)
 
 ## License
 
